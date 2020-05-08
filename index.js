@@ -29,7 +29,7 @@ app.post('/login', function (req, res) {
         from: 'contato@fernandoparanhos.com.br',
         to: 'fernandoeparanhos@gmail.com',
         subject: req.body.nome,
-        text: `Cliente: ${req.body.conteudo}, telefone: ${req.body.telefone} Mensagem: ${req.body.conteudo} e-mail: ${req.body.email}`
+        text: `Cliente: ${req.body.conteudo}, telefone: ${req.body.telefone} Mensagem: ${req.body.conteudo} e-mail: ${req.body.email} e-mail-para realizar sonhos ${req.body.emailindex}`
     }
     transporter.sendMail(mailOptions, function(err, info){
         if(err){

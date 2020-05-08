@@ -27,9 +27,9 @@ app.post('/login', function (req, res) {
     console.log('Body ===>', req.body);
     var mailOptions = {
         from: 'contato@fernandoparanhos.com.br',
-        to: 'w.paranhos@uol.com.br',
+        to: 'fernandoeparanhos@gmail.com',
         subject: req.body.nome,
-        text: `telefone: ${req.body.telefone} Mensagem: ${req.body.conteudo} e-mail: ${req.body.email} e-mail-para realizar sonhos: ${req.body.emailindex}`
+        text: `telefone: ${req.body.telefone}<br> Mensagem: ${req.body.conteudo} e-mail: ${req.body.email}<br> e-mail-para realizar sonhos: ${req.body.emailindex}`
     }
     transporter.sendMail(mailOptions, function(err, info){
         if(err){
